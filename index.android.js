@@ -2,12 +2,14 @@
 import React from "react";
 //Text and AppRegistry belong to the ReactNative library, but we only need those parts
 //So we only import those things to avoid having to import the entire library
-import { Text, AppRegistry } from "react-native";
+import { AppRegistry } from "react-native";
+import Header from "./src/components/header";
 
 //Create a Component
 //fat arrow functions without curly braces is a shortcut to just return the thing inside
 const App = () => (
-    <Text>Some Text</Text>
+    //A tag with nothing inside can be made self-closing
+    <Header />
 );
 
 //Render it to the device
