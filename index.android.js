@@ -1,53 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+//Import a library to create a component
+import React from "react";
+//Text and AppRegistry belong to the ReactNative library, but we only need those parts
+//So we only import those things to avoid having to import the entire library
+import { Text, AppRegistry } from "react-native";
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+//Create a Component
+//fat arrow functions without curly braces is a shortcut to just return the thing inside
+const App = () => (
+    <Text>Some Text</Text>
+);
 
-export default class albums extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('albums', () => albums);
+//Render it to the device
+//Tells React to render an application called albums, passing in a function that returns the first component to render
+AppRegistry.registerComponent("albums", () => App);
